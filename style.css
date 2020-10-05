@@ -1,0 +1,253 @@
+/* CONTAINER - it's a grid*/
+
+#container {
+    position: relative;
+    background: linear-gradient();
+    padding: 0px;
+    margin: 0px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: .5fr 1fr 1fr 1fr;
+    grid-gap: 1px;
+    grid-template-areas: 
+    "header header header header"
+    "features features features features"
+    "main main main sidebar"
+    "main main main sidebar"
+    "footer footer footer footer";
+}
+
+
+/* Header sections - handling text of the banner*/
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+}
+.headrln {
+    width: 65vw
+}
+h1 {
+   color: orangered; 
+   text-shadow: 2px 2px 2px darkgray;
+}
+.subhead {
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/* this is the subhead section*/
+.features {
+    grid-area: features;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    /* background-color: rgba(255, 160, 122, 0.171); */
+    height: 60vh
+}
+.imgbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.img {
+    width: 25vw;
+    height: auto;
+    padding: 20px;
+}
+
+
+.banner {
+    text-align: center;
+    background-color: rgba(255, 102, 0, 0.288);
+    background-position-y: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: 10vh;
+}
+
+.featsect {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+}
+
+button {
+    height: 3vw;
+    align-self: center;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;   
+}
+.button {
+    height: 3vw;
+    align-self: center;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;   
+}
+
+/* styling for the other pages - more will be added here */
+.blogpic {
+    padding-top: 20vh;
+    height: 40vh;
+    width: 75vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.contbody {
+    padding-right: 10vw;
+}
+.contimg {
+    padding-right: 20vw;
+    height: 30vh;
+    width: 40vw;
+}
+.post {
+    padding-bottom: 8vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+
+/* Siderbar layout*/
+.sidebar {
+    grid-area: sidebar;
+    /* background-color: lightpink; - JUST SO I CAN SEE WHAT IM DOING */
+    height: 100vw;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; -- didn't quite nail this but I plan on going back and tweaking*/
+
+}
+#sidebar {
+    display: flex;
+    flex-direction: column;
+}
+.sideimg {
+    width: 10vw;
+    height: 10vw;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+
+#message {
+    width: 20vw;
+    height: 10vh
+}
+
+
+/* Main content*/
+.main {
+    grid-area: main;
+    /* background-color: lightgreen;  - JUST SO I CAN SEE WHAT IM DOING */
+    padding-left: 25vw;
+    padding-right: 2vw;
+}
+p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: rgb(233, 232, 232);
+    height: 36vh;
+    width: auto;
+    display: grid;
+    grid-template-rows: 6vh 6vh 6vh 6vh 6vh 1fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-areas: 
+    "foottitle foottitle foottitle foottitle"
+    "name email contacttitle contacttitle"
+    "message message address twit"
+    "message message address insta"
+    "message message phone drib"
+    "message message mail face"
+    ;
+    justify-content: center;
+    align-content: center;
+}
+
+#foottitle {
+    grid-area: foottitle;
+    align-self: center;
+    justify-self: center;
+}
+#name {
+    grid-area: name;
+    align-self: flex-end;
+    margin-left: 20%;
+    
+}
+#email {
+    grid-area: email;
+    align-self: flex-end;
+}
+#contacttitle {
+    grid-area: contacttitle;
+}
+#message {
+    grid-area: message;
+    align-self: baseline;
+    width: 93%;
+    height: 80%;
+    text-align: center;
+    
+    
+    /* -- didn't quite nail this one either, again, I'll go back and tweak this
+     grid-column-start: 0;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    justify-self:start ; */
+}
+#address {
+    grid-area: address;
+    /* grid-column-start: 3;
+    grid-column-end: 4; */
+}
+#twit {
+    grid-area: twit;
+    /* grid-column-start: 4;
+    grid-column-end: 5; */
+}
+#insta {
+    grid-area: insta;
+    /* grid-column-start: 4;
+    grid-column-end: 5; */
+}
+#phone {
+    grid-area: phone;
+    /* grid-column-start: 3;
+    grid-column-end: 4; */
+}
+#drib {
+    grid-area: drib;
+    /* grid-column-start: 4;
+    grid-column-end: 5; */
+}
+#mail {
+    grid-area: mail;
+    /* grid-column-start: 3;
+    grid-column-end: 4; */
+}
+#face {
+    grid-area: face;
+    /* grid-column-start: 4;
+    grid-column-end: 5; */
+}
+.icon {
+    height: 18px;
+    width: 18px;
+}
